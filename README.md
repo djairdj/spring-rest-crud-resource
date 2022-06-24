@@ -22,7 +22,7 @@ Iniciamos o projeto no site https://start.spring.io/
 
 ![](/img/start.png "Bens criados")
 
-Em um arquitetura Spring Boot conseguimos obter o contexto da aplicação e é que entra em ação a nossa customização para conhecer os beans (services e repositorys) criados pelo framework.
+1. Em um arquitetura Spring Boot conseguimos obter o contexto da aplicação e é que entra em ação a nossa customização para conhecer os beans (services e repositorys) criados pelo framework.
 
 ```java
 
@@ -59,4 +59,8 @@ public class Beans {
 }
 
 ```
-
+2. Depois criarmos duas classes abstratas  `digytal.spring.rest.crud.controller.CrudController` e `digytal.spring.rest.crud.service.CrudService`. O grande ponto em questão é o método `autowired()`, é ele que se encarrega de definir qual service e repository será injetado no componente.
+```
+@PostConstruct
+public void autowired() {}
+```
