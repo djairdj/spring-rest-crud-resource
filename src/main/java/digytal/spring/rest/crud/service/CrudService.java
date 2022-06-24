@@ -23,6 +23,9 @@ public abstract class CrudService<T> {
     public <T>T finById(Object id){
         return (T) repository.findById(id);
     }
+    public void deleteById(Object id){
+        repository.deleteById(id);
+    }
     public <T> List<T> finByAll(){
         return repository.findAll();
     }
