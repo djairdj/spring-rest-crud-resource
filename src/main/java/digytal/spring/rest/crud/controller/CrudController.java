@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 @RestController
@@ -14,7 +15,17 @@ public abstract class CrudController <T> {
     private Beans beans;
     protected CrudService<T> service;
 
+    public CrudController() {
+        this.model =  (Class<T>) ((ParameterizedType) getClass()
+                .getGenericSuperclass()).getActualTypeArguments()[0];
+    }
+
     private Class<T> model;
+    /*
+      Apos os objetos serem criados
+      chamamos o métod automaticamente
+      para definir qual service será utilizado
+     */
     @PostConstruct
     public void autowired() {
         service = beans.service(model);
