@@ -60,7 +60,36 @@ public class Beans {
 
 ```
 2. Depois criarmos duas classes abstratas  `digytal.spring.rest.crud.controller.CrudController` e `digytal.spring.rest.crud.service.CrudService`. O grande ponto em questão é o método `autowired()`, é ele que se encarrega de definir qual service e repository será injetado no componente.
-```
+``` java
 @PostConstruct
 public void autowired() {}
 ```
+
+3. E por fim temos os nosso controllers e services desfrutando de recursos de CRUD através de herança.
+``` java
+package digytal.spring.rest.crud.controller;
+
+import digytal.spring.rest.crud.model.Marca;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/marcas")
+public class MarcaController extends CrudController <Marca> {
+}
+```
+
+``` java
+package digytal.spring.rest.crud.controller;
+
+import digytal.spring.rest.crud.model.Produto;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/produtos")
+public class ProdutoController extends CrudController<Produto> {
+}
+
+```
+
