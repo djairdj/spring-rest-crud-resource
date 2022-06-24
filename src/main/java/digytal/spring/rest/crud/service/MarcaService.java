@@ -8,5 +8,14 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class MarcaService extends CrudService <Marca> {
+    /*
+    Este método é opcional,
+    ele executa antes de salvar
+    voce poder usar para validar dados da entidade
+    antes de tentar salvar
+     */
+    @Override
+    protected void prepareSave(Marca entity) {
 
+    }
 }

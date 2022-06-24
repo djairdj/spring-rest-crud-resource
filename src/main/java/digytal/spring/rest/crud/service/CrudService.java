@@ -18,6 +18,7 @@ public abstract class CrudService<T> {
         repository = beans.repository(this);
     }
     public void save(T entity){
+        prepareSave(entity);
         repository.save(entity);
     }
     public <T>T finById(Object id){
@@ -29,4 +30,5 @@ public abstract class CrudService<T> {
     public <T> List<T> finByAll(){
         return repository.findAll();
     }
+    protected abstract void prepareSave(T entity);
 }
