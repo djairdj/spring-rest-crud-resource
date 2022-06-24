@@ -65,7 +65,7 @@ public class Beans {
 public void autowired() {}
 ```
 
-3. E por fim temos os nosso controllers e services desfrutando de recursos de CRUD através de herança.
+3. E por fim temos os nossos controllers e services desfrutando de recursos de CRUD através de herança.
 ``` java
 package digytal.spring.rest.crud.controller;
 
