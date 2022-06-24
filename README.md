@@ -94,9 +94,9 @@ public class ProdutoController extends CrudController<Produto> {
 ```
 
 #### Analisando o log da aplicação
-![](/img/save marca.png "Save Marca")
+![](/img/save_marca.png "Save Marca")
 
-![](/img/save produtos.png "Save Produto")
+![](/img/save_produto.png "Save Produto")
 
-![](/img/select.png "Selects")
+![](/img/selects.png "Selects")
 
