@@ -20,7 +20,7 @@ Baseado nos padrão `AbstractDao` e `Repository`, criamos o conceito de `CrudCon
 ### Como funciona ?
 Iniciamos o projeto no site https://start.spring.io/
 
-![](/img/start.png "Bens criados")
+![](/img/start.png "Start")
 
 1. Em um arquitetura Spring Boot conseguimos obter o contexto da aplicação e é que entra em ação a nossa customização para conhecer os beans (services e repositorys) criados pelo framework.
 
@@ -92,4 +92,11 @@ public class ProdutoController extends CrudController<Produto> {
 }
 
 ```
+
+#### Analisando o log da aplicação
+![](/img/save marca.png "Save Marca")
+
+![](/img/save produtos.png "Save Produto")
+
+![](/img/select.png "Selects")
 
