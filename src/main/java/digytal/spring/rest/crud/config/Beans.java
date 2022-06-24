@@ -20,7 +20,7 @@ public class Beans {
     }
     private <T> T componentType(String beanName) {
         Object bean = context.getBean(beanName);
-        System.out.println("Componente localizado " + bean.toString());
+        System.out.println(String.format("Componente identificado com o nome: %s localizado em: %s", beanName,  bean.toString()));
         return (T) bean;
     }
     private String beanName(Class clazz) {
