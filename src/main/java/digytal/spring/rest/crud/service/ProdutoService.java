@@ -17,7 +17,7 @@ public class ProdutoService extends CrudService <Produto> {
     */
     @Override
     protected void prepareSave(Produto entity) {
-
+        System.out.println("Regra de verificação da entidade Produto antes de salvar");
     }
 
 }

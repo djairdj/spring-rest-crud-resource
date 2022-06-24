@@ -16,6 +16,6 @@ public class MarcaService extends CrudService <Marca> {
      */
     @Override
     protected void prepareSave(Marca entity) {
-
+        System.out.println("Regra de verificação da entidade Marca antes de salvar");
     }
 }
